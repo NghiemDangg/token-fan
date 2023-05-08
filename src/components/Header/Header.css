@@ -1,0 +1,78 @@
+header {
+    width: 100%;
+}
+
+header .header-top {
+    height: 46px;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 16px;
+}
+.header-top .user {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.header-top .user svg {
+    font-size: 1.6rem;
+}
+.header-top .user span {
+    font-size: 14px;
+    margin-left: 8px;
+}
+.header-top .right button {
+    padding: 8px 16px;
+    color: #fff;
+    background: transparent;
+    outline: none;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.header-top .right button:active {
+    opacity: 0.8;
+}
+
+.userName span {
+    position: relative;
+    bottom: 4px;
+}
+
+.userName svg {
+    position: relative;
+    top: 2px;
+    margin-right: 4px;
+    font-size: 1.6rem;
+}
+
+/* HEADER BOTTOM */
+.header-bottom {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 250px;
+    background-image: url('https://tuyendung.vietis.com.vn/wp-content/themes/theme-tuyen-dung-vietis/img/shared/bg.png');
+    box-shadow: 0 1px 4px rgba(0,0,0,.2);
+}
+.header-bottom ul {
+    list-style: none;
+    display: flex;
+}
+.header-bottom li {
+    margin-left: 16px;
+    font-weight: bold;
+}
+.header-bottom li a {
+    color: #333;
+}
+.header-bottom a:hover {
+    text-decoration: underline;
+}

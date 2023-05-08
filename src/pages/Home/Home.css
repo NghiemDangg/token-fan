@@ -1,0 +1,363 @@
+section {
+    width: 1424px;
+    margin: 0 auto;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+section input {
+    width: 360px;
+    height: 36px;
+    outline: none;
+    padding: 0 16px;
+    border: 1px solid lightblue;
+    border-radius: 25px;
+}
+section button {
+    margin-left: 12px;
+    padding: 8px 16px;
+    outline: none;
+    background-color: #0d6efd;
+    border: 1px solid #0d6efd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    min-width: 78px;
+}
+section button:hover {
+    background-color: #0b5ed7;
+}
+section button:active {
+    background-color: #0a58ca;
+}
+section .block-input {
+    padding: 10px 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 5px;
+    border-top: 5px solid rgb(245, 132, 31);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    background-color: #fff;
+}
+
+section .input-line {
+    margin-bottom: 20px;
+}
+
+.claim-code {
+    margin: 0 0 12px 8px;
+    font-weight: 500;
+    max-width: 450px;
+    line-break: anywhere;
+}
+.claim-code i {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+/*     CONNECT WALLET     */
+.connect-wallet {
+    margin-top: 120px;
+}
+.connect-wallet::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #3a5a98;
+}
+
+/* Large Card */
+
+.home {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrap {
+    width: 1424px;
+}
+#news .news-title {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+#news .news-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: #3a5a98;
+    margin: 0 auto;
+}
+.home-container {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-row-2-col,
+.home-row-4-col {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.home-item--large {
+    width: 50%;
+    height: 500px;
+    margin: 0 16px;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.home-item--large:hover,
+.home-item--medium:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.home-item--large:hover .img,
+.home-item--medium:hover .img {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.item-image {
+    height: 100%;
+    width: 50%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    overflow: hidden;
+}
+
+.item-image .img,
+.item-m-image .img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.item-content {
+    width: 50%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-content-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.item-content-des {
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.item-content-footer,
+.item-m-content-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.item-content-footer--left,
+.item-m-content-footer--left {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.item-content-footer--left span,
+.item-m-content-footer--left span {
+    position: relative;
+    margin: 0 8px;
+    top: -2px;
+}
+
+/* Medium Card */
+
+.home-item--medium {
+    width: 25%;
+    height: 500px;
+    margin: 0 16px;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
+    flex-direction: column;
+}
+
+.item-m-image {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.item-m-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 15px;
+    flex: 1;
+}
+
+.item-m-content-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.item-m-content-des {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* banner */
+.banner {
+    height: 500px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* voting */
+.voting {
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100%;
+    margin-top: 30px;
+    background-size: cover;
+    background-position: center;
+}
+
+.voting-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.voting-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.voting-content-title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.voting-card-container {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    height: 100%;
+    margin: 0 16px;
+}
+
+.card-shirt {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    padding: 20px 10px;
+    background-color: white;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.card-shirt-img {
+    height: 250px;
+    width: 80%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+
+.card-shirt-des {
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.button-vote {
+    border: 1px solid #c2c0c0;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-top: auto;
+    margin-bottom: 30px;
+}
+
+.button-vote:hover {
+    background-color: #eeeded;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* Partner */
+
+.partner {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    flex-direction: column;
+    margin: 50px 0;
+    align-items: center;
+    padding: 30px 20px;
+    border-top: 1px solid #c2c0c0;
+    border-bottom: 1px solid #c2c0c0;
+}
+
+.partner-title {
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.partner-line {
+    margin-top: 10px;
+    width: 200px;
+    height: 4px;
+    background-color: rgb(245, 132, 31);
+    border-radius: 25px;
+}
+
+.partner-logo {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.partner-logo-item {
+    width: 160px;
+    background-position: center;
+    height: 160px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 50px;
+}
+
+.partner-logo-item:nth-child(3) {
+    width: 270px;
+}

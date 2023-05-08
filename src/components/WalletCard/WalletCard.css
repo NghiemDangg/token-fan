@@ -1,0 +1,68 @@
+.wallet-card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 500px;
+    height: 250px;
+    border-radius: 5px;
+    border-top: 5px solid rgb(245, 132, 31);
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+.wallet-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 10px 20px;
+    border-bottom: 1px solid #c2c0c0;
+    margin: 0 -20px;
+}
+
+.wallet-card-button {
+    padding: 6px 8px;
+    border-radius: 25px;
+    background-color: #0d6efd;
+    cursor: pointer;
+}
+.wallet-card-button:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.wallet-card-button svg {
+    font-size: 1.2rem;
+    position: relative;
+    top: 2px;
+    color: white;
+}
+
+.wallet-card-body {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wallet-card-address,
+.wallet-card-balance {
+    margin: 10px 0;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h4 svg {
+    position: relative;
+    top: 2px;
+    color: gold;
+}
+
+.wallet-card-body img {
+    position: absolute;
+    width: 60px;
+    right: 0;
+    bottom: 10px;
+}
