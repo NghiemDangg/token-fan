@@ -1,18 +1,15 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { publicRoutes } from './routers/index';
 
-function App() {
+import { useRoutes } from 'react-router-dom';
+import { Layout } from './layouts';
+
+const App = () => {
+    const routes = useRoutes(publicRoutes);
     return (
-        <Router>
-            <div className="App">
-                <Routes>
-                    {publicRoutes.map((route, index) => {
-                        return <Route key={index} path={route.path} element={<route.component />} />;
-                    })}
-                </Routes>
-            </div>
-        </Router>
+        <div className="App">
+            <Layout>{routes}</Layout>
+        </div>
     );
-}
+};
 
 export default App;

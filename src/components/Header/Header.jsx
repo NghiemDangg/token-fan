@@ -3,7 +3,7 @@ import { AiOutlineUser } from 'react-icons/ai';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Header.css';
-import routes from '../../routers/routers';
+// import routes from '../../routers/routers';
 import images from '../../assets/images';
 
 function Header() {
@@ -30,7 +30,7 @@ function Header() {
                             <span>{auth.user}</span>
                         </p>
                     ) : (
-                        <Link to={routes.login} className="user">
+                        <Link to="/login" className="user">
                             <AiOutlineUser />
                             <span>Login</span>
                         </Link>
@@ -39,13 +39,22 @@ function Header() {
                 <div className="right">{auth && <button onClick={handleLogout}>Logout</button>}</div>
             </div>
             <div className="header-bottom">
-                <a href="/">
+                <Link to="/">
                     <img src={images.logo} alt="" />
-                </a>
+                </Link>
                 <ul>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#vote">Vote</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <Link to="/claim">Claim</Link>
+                    </li>
+                    <li>
+                        <a href="#news">News</a>
+                    </li>
+                    <li>
+                        <a href="#vote">Vote</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
                 </ul>
             </div>
             <ToastContainer />

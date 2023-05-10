@@ -1,14 +1,9 @@
 import { BiShareAlt } from 'react-icons/bi';
 import Header from '../../components/Header/Header';
 import './Home.css';
-import WalletCard from '../../components/WalletCard/WalletCard';
 import Footer from '../../components/Footer/Footer';
-import { VFC } from '../../config/contract';
 import React, { useState } from 'react';
-import { ethers, utils } from 'ethers';
-import { toast } from 'react-toastify';
-import { data } from '../../store';
-import { Web3Provider } from '@ethersproject/providers';
+
 import images from '../../assets/images';
 import Banner from '../../components/Banner/Banner';
 
@@ -95,72 +90,72 @@ function Home() {
         },
     ];
 
-    const [claimCode, setClaimCode] = useState('');
-    const [email, setEmail] = useState('');
-    const [emailHash, setEmailHash] = useState('');
+    // const [claimCode, setClaimCode] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [emailHash, setEmailHash] = useState('');
 
-    function verifyEmail(email) {
-        var re = /\S+@\S+\.\S+/;
-        const suffix = '@vietis.com.vn';
-        if (email.indexOf(suffix, email.length - suffix.length) === -1) {
-            return false;
-        }
-        return re.test(email);
-    }
+    // function verifyEmail(email) {
+    //     var re = /\S+@\S+\.\S+/;
+    //     const suffix = '@vietis.com.vn';
+    //     if (email.indexOf(suffix, email.length - suffix.length) === -1) {
+    //         return false;
+    //     }
+    //     return re.test(email);
+    // }
 
-    const emailHashHandler = () => {
-        if (!data.address) {
-            toast.error('You must connect to Metamask wallet to execute !', {
-                position: toast.POSITION.TOP_RIGHT,
-            });
-        } else if (claimCode) {
-            toast.error('You already have Claim Code !', {
-                position: toast.POSITION.TOP_RIGHT,
-            });
-        } else if (!verifyEmail(email)) {
-            toast.error('Email must have domain name "@vietis.com.vn" !', {
-                position: toast.POSITION.TOP_RIGHT,
-            });
-        } else {
-            const emailHash = ethers.utils.hashMessage(email);
-            setEmailHash(emailHash);
-            const claimCode = ethers.utils.keccak256(emailHash);
-            setClaimCode(claimCode);
-        }
-    };
+    // const emailHashHandler = () => {
+    //     if (!data.address) {
+    //         toast.error('You must connect to Metamask wallet to execute !', {
+    //             position: toast.POSITION.TOP_RIGHT,
+    //         });
+    //     } else if (claimCode) {
+    //         toast.error('You already have Claim Code !', {
+    //             position: toast.POSITION.TOP_RIGHT,
+    //         });
+    //     } else if (!verifyEmail(email)) {
+    //         toast.error('Email must have domain name "@vietis.com.vn" !', {
+    //             position: toast.POSITION.TOP_RIGHT,
+    //         });
+    //     } else {
+    //         const emailHash = ethers.utils.hashMessage(email);
+    //         setEmailHash(emailHash);
+    //         const claimCode = ethers.utils.keccak256(emailHash);
+    //         setClaimCode(claimCode);
+    //     }
+    // };
 
-    const getClaimToken = async () => {
-        if (email === '') {
-            toast.error('Must have an email address !', {
-                position: toast.POSITION.TOP_RIGHT,
-            });
-        } else {
-            //get address account
-            const provider = new Web3Provider(window.ethereum);
-            const signer = provider.getSigner();
-            const VFCWithSigner = VFC.connect(signer);
-            // call function abi employeesClaim with emailsHash and signature
-            const claim = await VFCWithSigner.employeesClaim(emailHash, claimCode)
-                .then(() => {
-                    toast.success('Claim successful !', {
-                        position: toast.POSITION.TOP_RIGHT,
-                    });
-                    setClaimCode('');
-                })
-                .catch((err) => {
-                    const messageError = err.error.message;
-                    toast.error(`${messageError} !`, {
-                        position: toast.POSITION.TOP_RIGHT,
-                    });
-                    setClaimCode('');
-                });
-        }
-    };
+    // const getClaimToken = async () => {
+    //     if (email === '') {
+    //         toast.error('Must have an email address !', {
+    //             position: toast.POSITION.TOP_RIGHT,
+    //         });
+    //     } else {
+    //         //get address account
+    //         const provider = new Web3Provider(window.ethereum);
+    //         const signer = provider.getSigner();
+    //         const VFCWithSigner = VFC.connect(signer);
+    //         // call function abi employeesClaim with emailsHash and signature
+    //         const claim = await VFCWithSigner.employeesClaim(emailHash, claimCode)
+    //             .then(() => {
+    //                 toast.success('Claim successful !', {
+    //                     position: toast.POSITION.TOP_RIGHT,
+    //                 });
+    //                 setClaimCode('');
+    //             })
+    //             .catch((err) => {
+    //                 const messageError = err.error.message;
+    //                 toast.error(`${messageError} !`, {
+    //                     position: toast.POSITION.TOP_RIGHT,
+    //                 });
+    //                 setClaimCode('');
+    //             });
+    //     }
+    // };
     return (
         <div className="home">
-            <Header />
+            {/* <Header /> */}
             <Banner />
-            <div className="connect-wallet">
+            {/* <div className="connect-wallet">
                 <h2>Connect Metamask Wallet</h2>
             </div>
             <section>
@@ -194,7 +189,7 @@ function Home() {
                         <button onClick={getClaimToken}>Claim</button>
                     </div>
                 </div>
-            </section>
+            </section> */}
             <div className="wrap" id="news">
                 <div className="news-title">
                     <h2>News</h2>
@@ -302,7 +297,7 @@ function Home() {
                     })}
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }

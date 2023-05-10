@@ -4,8 +4,8 @@ import { FiLinkedin, FiFacebook } from 'react-icons/fi';
 
 function Footer() {
     return (
-        <div className="footer" id='contact'>
-            <div className="wrap">
+        <div className="footer" id="contact">
+            <div className="wrap container">
                 <div className="footer-container">
                     <div className="footer-content">
                         <div className="footer-content-left">
